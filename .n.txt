@@ -1,0 +1,11 @@
+from django.contrib.auth import get_user_model
+def reset_password(Sashidhar975@gmail.com, Sashi@123):
+    try:
+        user = get_user_model().objects.get(username=Sashidhar975@gmail.com)
+    except:
+        return "User could not be found"
+    user.set_password(Sashi@123)
+    user.save()
+    return "Password has been changed successfully"
+
+
